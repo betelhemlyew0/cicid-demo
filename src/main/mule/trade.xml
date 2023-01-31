@@ -137,7 +137,7 @@ output application/json
     code: "AAPL",
     exchange: "NYSE",
     operation: "buy",
-    price: 136.766,
+    price: 136.76,
     quantity: 20
   }
 ]]]></ee:set-payload>

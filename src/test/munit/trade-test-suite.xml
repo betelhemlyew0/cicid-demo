@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="trade-test-suite.xml" />
+	<munit:test name="trade-test-suite-get:\trades:trade-configTest" doc:id="1f7773b9-4669-4244-b05b-24cead5bfe33" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\trades:trade-config" doc:id="f323410c-12c4-466e-aeb5-232926d11583" name="get:\trades:trade-config"/>
+		</munit:execution>
+		<munit:validation >
+			<logger level="INFO" doc:name="Logger" doc:id="99455283-8faa-4176-8e73-e1bfc603b6be" message="#[payload]"/>
+			<munit-tools:assert doc:name="Assert expression" doc:id="fa61ac4c-d995-41c0-a689-c1da9fb64d47" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
